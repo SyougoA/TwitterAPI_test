@@ -18,11 +18,11 @@ def get_tweet(user, num):
 		print(tweet.text)
 		print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 #あるwordをnum件エゴサして出力させる
-def search(word, num):
+def search(word, kaisuu):
 	keywords = [word]
 	query = "OR".join(keywords)
 
-	for tweet in api.search(q = query, num = kazu):
+	for tweet in api.search(q = query, count = kaisuu):
 		print(tweet.created_at)
 		print(tweet.user.screen_name)
 		print(tweet.text)
